@@ -1,37 +1,47 @@
-
 .container {
-    width: 700px;
-    margin-top: 100px;
-    .container_div {
-        margin-top: 5px;
-        &_title {
-            position: relative;
-            background-color: #aaa7a5;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 5px 10px;
-            &:hover {
-                background-color: grey;
-            }
-            &>span{
-                font-size: 25px;
-                cursor: pointer;
-                
-            }
-            &>h4 {
-                font-weight: 600;
-                cursor: default;
-            }
-        }
-        &_text {
-            display: none;
-        }
+  width: 700px;
+  margin-top: 100px;
+  .container_div {
+    margin-top: 5px;
+    &_title {
+      position: relative;
+      background-color: #aaa7a5;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px 10px;
+      &:hover {
+        background-color: grey;
+      }
+      & > span {
+        font-size: 25px;
+        cursor: pointer;
+        transition: all 0.5s;
+      }
+      & > h4 {
+        font-weight: 600;
+        cursor: default;
+      }
     }
+    &_text {
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.5s ease;
+    }
+  }
 }
-.showText{
-    display: block;
-    background-color: #f9faf7;
-    padding: 5px 10px;
-    cursor: default;
+.showText {
+  height: auto;
+  background-color: #f9faf7;
+  padding: 5px 10px;
+  transition: all 0.5s ease;
+  cursor: default;
+}
+
+.changeColor {
+  color: red;
+}
+.roatet {
+  transform: rotateZ(180deg);
+  transition: all 0.5s;
 }
