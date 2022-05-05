@@ -14,6 +14,8 @@ export default function Accordion() {
         setIndex(index.concat(i));
       } else {
         index.shift();
+        index.push(i);
+        setIndex((prev) => [...prev, index]);
       }
     } else {
       setIndex(index.filter((el) => el !== i));
